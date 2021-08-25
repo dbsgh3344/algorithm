@@ -1,3 +1,5 @@
+import numpy as np 
+
 
 def solution(s) :
     print("1")
