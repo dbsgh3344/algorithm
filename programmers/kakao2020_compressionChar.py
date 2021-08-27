@@ -1,4 +1,3 @@
-
 def solution(s) :
     tmp = len(s)
     for i in range(len(s)) :
@@ -31,6 +30,16 @@ def solution(s) :
     
     return tmp
             
+def solution2(s) :
+
+
+    for i in range(len(s)) :
+        iter_chars = s[:i+1]
+        
+        
+
+
+
 
 
 if __name__=="__main__":
