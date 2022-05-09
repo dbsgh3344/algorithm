@@ -1,2 +1,3 @@
-./.vscode
-./inflean_algorithm/.vscode/
+.vscode
+.inflean_algorithm/.vscode/
+.launch.json
