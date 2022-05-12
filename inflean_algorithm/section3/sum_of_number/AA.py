@@ -27,7 +27,7 @@ lt = 0
 rt = 1
 tot = numlist[lt]
 
-while lt!=len(numlist)-1 :
+while True :
     if tot < m:
         if rt >= len(numlist) :
             break
