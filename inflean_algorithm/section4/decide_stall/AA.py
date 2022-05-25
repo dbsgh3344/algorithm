@@ -1,20 +1,31 @@
 import sys
-sys.stdin = open('inputs.txt','r')
+# sys.stdin = open('inputs.txt','r')
 
 n,c = map(int,input().split())
 arr = sorted([int(input()) for _ in range(n)])
 
-lt =0
-rt = n-1
-thres = (rt+lt)//2
-res= 234234
+lt =1
+rt = arr[-1]
+
+res= 0
 while lt<=rt :
-    left = abs(arr[lt]-arr[thres])
-    right = abs(arr[rt]-arr[thres])
-    minimum= min(left,right)
-    # if left > right :
-        
+    cnt =1
+    thres = (rt+lt)//2
     
-    if res > minimum:
-        res = minimum
+    tmp =0
+    for i in range(1,len(arr)) :
+        if abs(arr[tmp]-arr[i]) >=thres :
+            cnt+=1
+            tmp =i
     
+
+    if cnt >=c:
+        if res < thres :
+            res = thres
+        lt= thres +1
+    else :
+        rt = thres-1
+    
+
+
+print(res)
