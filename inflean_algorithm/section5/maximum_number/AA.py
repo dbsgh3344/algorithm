@@ -18,6 +18,6 @@ while m!=0 and len(num)!=0:
         m-=1
     
 
-ans =''.join(stack+list(num))[:lens]
+ans =''.join(stack+list(num))[:-m]
 print(ans)
     
