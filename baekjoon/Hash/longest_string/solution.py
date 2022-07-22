@@ -1,10 +1,10 @@
-
 ### 시간초과 unsolved
 import sys
 sys.stdin = open('inputs.txt','r')
 
-n= int(input())
-strs = input()
+# n= int(input())
+n= int(sys.stdin.readline().strip())
+strs = sys.stdin.readline().strip()
 idx= 2
 hashdicts = {}
 while idx!=(len(strs)//2)+1:
