@@ -16,16 +16,6 @@ q= deque([(0,0)])
 for r,c in appleaxis:
     arr[r-1][c-1] =1
 
-tmp_direction = 'D'
-for i in range(n) :
-    for j in range(n):
-        if tmp_direction=='D':
-            q.append((i,j))
-            if arr[i][j]!=1:
-                q.popleft()
-            
-        else :
-            
 
     
             
