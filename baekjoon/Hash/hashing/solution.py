@@ -1,5 +1,5 @@
 import sys
-# sys.stdin = open('inputs.txt','r')
+sys.stdin = open('./baekjoon/Hash/hashing/inputs.txt','r')
 m= 1234567891
 r= 31
 l = int(input())
