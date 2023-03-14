@@ -1,3 +1,4 @@
 .vscode
 .inflean_algorithm/.vscode/
 .launch.json
+*.txt
