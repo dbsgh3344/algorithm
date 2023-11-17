@@ -1,34 +1,36 @@
-from collections import deque
+import math
+from math import sqrt
 def solution(r1,r2) :
     cnt = 0
-    
-    lists= []
+
     for x in range(r2+1) :
-        y = (r2**2-x**2)**0.5
-        for i in range(int(y//1)+1) :
-            lists.append((x,i))
-    
-
-    lists2= deque()
-    for x in range(r1+1) :
-        y = (r1**2 - x**2)**0.5
-        # print(x,y)
-        for i in range(int(y//1)+1) :
-            lists2.append((x,i))
-
-    while lists2 :
-        a= lists2.popleft() 
-        if a in lists :
-            lists.remove(a)
+        r2y = (r2**2-x**2)**0.5
+        if x > r1 :
+            r1y = 0
         else :
-            lists2.append(a)
+            r1y = (r1**2-x**2)**0.5 
+
+        r2_p = math.floor(float(r2y))
+        r1_p = math.ceil(float(r1y))
         
+        print(x,r2_p,r1_p)
 
-    print(lists)
-    # cnt+=8 
+        a = r2_p - r1_p + 1
+        cnt+=a
+
     
-    return len(lists)
+    return (cnt-(r2-r1+1))*4
     
 
-r1,r2 = 2,5
+# 다른 사람 풀이
+def solution(r1, r2):
+    quar = 0
+    for i in range(0, r1):
+        quar += int(sqrt(r2**2 - i**2)) - int(sqrt(r1**2 - i**2 - 1))
+    for i in range(r1, r2):
+        quar += int(sqrt(r2**2 - i**2))
+    return quar * 4
+
+
+r1,r2 = 2,3
 print(solution(r1,r2))
